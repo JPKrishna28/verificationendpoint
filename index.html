@@ -101,29 +101,6 @@
             margin-bottom: 30px;
         }
 
-        .return-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            font-weight: 500;
-        }
-
-        .return-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-
-        .return-button:active {
-            transform: translateY(0);
-        }
-
         .footer-text {
             margin-top: 30px;
             color: #999;
@@ -158,31 +135,12 @@
             <p>You can now return to the application and enjoy all the features.</p>
         </div>
         
-        <button class="return-button" onclick="returnToApp()">
-            Return to Application
-        </button>
-        
         <div class="footer-text">
             <p>If you have any questions, please contact our support team.</p>
         </div>
     </div>
 
     <script>
-        function returnToApp() {
-            // Option 1: Close the current window/tab if it was opened by the app
-            if (window.opener) {
-                window.close();
-                return;
-            }
-            
-            // Option 2: Redirect to your application URL
-            // Replace 'your-app-url' with your actual application URL
-            window.location.href = '/app'; // or 'https://yourapp.com'
-            
-            // Option 3: Go back to previous page
-            // window.history.back();
-        }
-
         // Auto-close after 10 seconds if opened as popup
         if (window.opener) {
             setTimeout(() => {
